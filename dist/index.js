@@ -98,7 +98,7 @@ async function installSamCli(python, version) {
     "pip",
     "install",
     "--upgrade",
-    `azure-cli==2.25.0`,
+    `azure-cli==${version}`,
   ]);
 
   // Symlink from separate directory so only SAM CLI is added to PATH
