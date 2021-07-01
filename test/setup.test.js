@@ -58,7 +58,7 @@ test.each([
   expect(io.which).toHaveBeenCalledWith(test.expected.python, true);
   expect(exec.exec).toHaveBeenCalledWith(
     expect.anything(),
-    expect.arrayContaining(["install", `aws-sam-cli==${test.expected.version}`])
+    expect.arrayContaining(["install", `azure-cli==${test.expected.version}`])
   );
   expect(core.addPath).toHaveBeenCalledTimes(1);
 });
