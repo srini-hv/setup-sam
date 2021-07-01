@@ -45,21 +45,3 @@ jobs:
           version=$(curl https://pypi.org/pypi/azure-cli/json | jq -r .info.version)
           sam --version | grep -F "$version"
         shell: bash
-
-      # Test sam init
-      - run: sam init --name sam-app --runtime nodejs14.x --dependency-manager npm --app-template hello-world
-
-      # Test sam build
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "14"
-      - run: sam build
-        working-directory: ./sam-app
-
-      # Test sam build --use-container
-      # Doesn't work as-is on macOS or Windows due to licensing:
-      # - https://github.com/actions/virtual-environments/issues/17
-      # - https://github.com/actions/virtual-environments/issues/1143
-      - if: startsWith(matrix.os, 'ubuntu')
-        run: sam build --use-container
-        working-directory: ./sam-app
