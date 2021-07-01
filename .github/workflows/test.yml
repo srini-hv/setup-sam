@@ -36,8 +36,8 @@ jobs:
       # Test setup specific version
       - uses: ./
         with:
-          version: "1.18.2"
-      - run: sam --version | grep -F 1.18.2
+          version: "2.24.0"
+      - run: az --version | grep -F 2.24.0
 
       # Test setup latest version
       - uses: ./
