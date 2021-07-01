@@ -1,4 +1,4 @@
-# setup-sam
+# setup-azure-cli
 
 [![Tests](https://github.com/aws-actions/setup-sam/actions/workflows/test.yml/badge.svg)](https://github.com/aws-actions/setup-sam/actions/workflows/test.yml)
 [![CodeQL](https://github.com/aws-actions/setup-sam/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/aws-actions/setup-sam/actions/workflows/codeql-analysis.yml)
