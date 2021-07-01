@@ -18,32 +18,32 @@ test.each([
   {
     platform: "linux",
     input: {},
-    expected: { version: "1.*", python: "python3" },
+    expected: { version: "2.*", python: "python3" },
   },
   {
     platform: "darwin",
     input: {},
-    expected: { version: "1.*", python: "python3" },
+    expected: { version: "2.*", python: "python3" },
   },
   {
     platform: "win32",
     input: {},
-    expected: { version: "1.*", python: "python" },
+    expected: { version: "2.*", python: "python" },
   },
   {
     platform: "linux",
-    input: { version: "1.2.*" },
-    expected: { version: "1.2.*", python: "python3" },
+    input: { version: "2.1.*" },
+    expected: { version: "2.1.*", python: "python3" },
   },
   {
     platform: "linux",
-    input: { python: "/root/Python 1.2.3" },
-    expected: { version: "1.*", python: "/root/Python 1.2.3" },
+    input: { python: "/root/Python 2.24.0" },
+    expected: { version: "2.*", python: "/root/Python 2.24.0" },
   },
   {
     platform: "linux",
-    input: { version: "1.2.3", python: "python1.2.3" },
-    expected: { version: "1.2.3", python: "python1.2.3" },
+    input: { version: "2.24.0", python: "python2.24.0" },
+    expected: { version: "2.24.0", python: "python2.24.0" },
   },
 ])("setup %o", async (test) => {
   jest.spyOn(os, "platform").mockReturnValue(test.platform);
