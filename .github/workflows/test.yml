@@ -43,5 +43,5 @@ jobs:
       - uses: ./
       - run: |
           version=$(curl https://pypi.org/pypi/azure-cli/json | jq -r .info.version)
-          sam --version | grep -F "$version"
+          az --version | grep -F "$version"
         shell: bash
